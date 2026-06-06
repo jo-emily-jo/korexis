@@ -15,7 +15,13 @@ Korexis/
 No build step, no dependencies, no external assets. Fonts are system/web-safe (Inter → Pretendard → system fallbacks) so Korean text renders naturally.
 
 ### Sections (in order)
-Header · Hero · Problem · Why Australia · Pilot (8 weeks) · Deliverables · Pricing · Scope · Platform vision · CTA / Contact · Footer
+Header · Hero · Problem · Why Australia · Market Entry Diagnostic (pricing) · Pilot workflow · Deliverables · Data Layer / SaaS vision · Scope · CTA / Contact · Footer
+
+Core positioning: *Korexis turns overseas market entry from guesswork into a repeatable experiment* — not a contact-list / cheap-research service, and no guarantee of meetings or revenue.
+
+The **Market Entry Diagnostic** section (`#pricing`) is a staged validation flow, not standalone packages: **Step 01 — 시장 진입 진단 ($1,500, one-time)** → **Step 02 — GTM 실행 파일럿 ($2,000, one-time, after diagnostic)** → **Step 03 — 월간 GTM 운영 (from $1,200/mo, recurring)**. Each step is gated on signal from the previous one.
+
+The **Data Layer** section (`#data-layer`) frames the long-term vision: the manual service evolves Service → Data → Internal Tools → SaaS Platform, with future product modules (Buyer Map Builder, Reply Classifier, GTM Report Generator, etc.).
 
 All call-to-action buttons point to `#contact`; the primary CTA opens an email to `korexis.co@gmail.com`. The LinkedIn button links to the founder's profile and opens in a new tab.
 
