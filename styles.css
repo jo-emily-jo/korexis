@@ -18,6 +18,20 @@
   --text-muted:  #4B5563;
   --white:       #FFFFFF;
 
+  /* Semantic design tokens (light UI). Reference these in components
+     instead of hardcoding colors, so text stays AA-legible on its surface. */
+  --text-primary:    #111827;                 /* headings on light — 17:1 on white */
+  --text-secondary:  #4B5563;                 /* body on light — 7:1 on white (AA) */
+  --text-on-dark:    #FFFFFF;                 /* text on navy sections */
+  --bg-base:         #F7F8F3;                 /* page background */
+  --bg-card:         #FFFFFF;                 /* card / panel surface */
+  --bg-tint:         #F0F2FB;                 /* subtle accent-tinted panel on light */
+  --bg-tint-lime:    #F2F8E4;                 /* subtle lime-tinted panel on light */
+  --accent:          #2563EB;                 /* primary accent (blue) — 4.6:1 on white */
+  --accent-strong:   #1D4ED8;                 /* darker blue for text/borders — 6:1 on white */
+  --accent-2:        #4D7C0F;                 /* readable green for text on light (lime is not) */
+  --border-strong:   rgba(17, 24, 39, 0.18);  /* visible outline on light (chips, dividers) */
+
   /* Surface helpers */
   --border:      rgba(17, 24, 39, 0.08);
   --shadow-sm:   0 1px 2px rgba(7, 24, 39, 0.04);
@@ -381,6 +395,16 @@ img, svg { display: block; max-width: 100%; }
   gap: 24px;
 }
 .cols-3 { grid-template-columns: repeat(3, 1fr); }
+.cols-2 { grid-template-columns: repeat(2, 1fr); }
+
+/* English service label under each service card title */
+.service-en {
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+  color: var(--blue);
+  font-weight: 600;
+  margin: -4px 0 10px;
+}
 
 .card {
   background: var(--white);
@@ -787,37 +811,37 @@ img, svg { display: block; max-width: 100%; }
   display: flex;
   flex-direction: column;
   gap: 6px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
   border-radius: 16px;
   padding: 20px 22px;
+  box-shadow: var(--shadow-sm);
 }
 .evo-index {
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.05em;
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--text-secondary);
 }
-.evo-name { font-size: 1.1rem; font-weight: 700; color: var(--white); }
-.evo-note { font-size: 0.88rem; color: rgba(255, 255, 255, 0.65); word-break: keep-all; }
+.evo-name { font-size: 1.1rem; font-weight: 700; color: var(--text-primary); }
+.evo-note { font-size: 0.88rem; color: var(--text-secondary); word-break: keep-all; }
 
-/* Current state highlighted in blue, future state in lime */
+/* Current state highlighted in blue, future state in green */
 .evo-stage--now {
-  border-color: rgba(37, 99, 235, 0.55);
-  background: rgba(37, 99, 235, 0.14);
+  border-color: var(--accent);
+  background: var(--bg-tint);
 }
 .evo-stage--future {
-  border-color: rgba(163, 230, 53, 0.5);
-  background: rgba(163, 230, 53, 0.12);
+  border-color: var(--accent-2);
+  background: var(--bg-tint-lime);
 }
-.evo-stage--future .evo-name { color: var(--lime); }
+.evo-stage--future .evo-name { color: var(--accent-2); }
 
 .evo-arrow {
   display: flex;
   align-items: center;
-  color: var(--lime);
+  color: var(--accent);
   font-size: 1.3rem;
-  opacity: 0.8;
 }
 
 /* Two columns: accumulated data + future product modules */
@@ -829,42 +853,43 @@ img, svg { display: block; max-width: 100%; }
   margin: 0 auto;
 }
 .datalayer-col {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 30px 28px;
+  box-shadow: var(--shadow-sm);
 }
 .datalayer-title {
   font-size: 1.05rem;
-  color: var(--white);
+  color: var(--text-primary);
   margin-bottom: 18px;
   padding-bottom: 14px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid var(--border);
 }
 .dl-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
 .dl-list li {
   position: relative;
   padding-left: 26px;
-  color: rgba(255, 255, 255, 0.82);
+  color: var(--text-secondary);
   word-break: keep-all;
 }
 .dl-list li::before {
   content: "→";
   position: absolute;
   left: 0;
-  color: var(--lime);
+  color: var(--accent);
   font-weight: 700;
 }
 
 .module-grid { display: flex; flex-wrap: wrap; gap: 12px; }
 .module-chip {
-  background: rgba(163, 230, 53, 0.10);
-  border: 1px solid rgba(163, 230, 53, 0.32);
+  background: var(--bg-card);
+  border: 1px solid var(--border-strong);
   border-radius: 999px;
   padding: 10px 18px;
   font-size: 0.9rem;
   font-weight: 600;
-  color: var(--white);
+  color: var(--text-primary);
 }
 
 /* Key sentence — emphasized strip */
@@ -874,9 +899,9 @@ img, svg { display: block; max-width: 100%; }
   text-align: center;
   font-size: 1.05rem;
   font-weight: 500;
-  color: var(--white);
-  background: rgba(37, 99, 235, 0.16);
-  border: 1px solid rgba(37, 99, 235, 0.35);
+  color: var(--text-primary);
+  background: var(--bg-tint);
+  border: 1px solid var(--accent);
   border-radius: var(--radius);
   padding: 22px 28px;
   word-break: keep-all;
@@ -929,6 +954,7 @@ img, svg { display: block; max-width: 100%; }
   .hero-visual { min-height: 320px; }
 
   .cols-3 { grid-template-columns: 1fr; }
+  .cols-2 { grid-template-columns: 1fr; }
   .timeline { grid-template-columns: 1fr; }
   .scope-grid { grid-template-columns: 1fr; }
   .deliverables-list { grid-template-columns: 1fr; }
@@ -958,4 +984,76 @@ img, svg { display: block; max-width: 100%; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   * { transition: none !important; }
+}
+
+/* =================================================================
+   BILINGUAL — EN / KO toggle
+   ================================================================= */
+/* Show only the active language. */
+html[data-lang="en"] [data-lang="ko"] { display: none; }
+html[data-lang="ko"] [data-lang="en"] { display: none; }
+
+/* Language toggle control (visible at all widths) */
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  flex-shrink: 0;
+}
+.lang-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px 6px;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+  transition: color 0.15s ease;
+}
+.lang-btn:hover { color: var(--navy); }
+.lang-btn.is-active { color: var(--blue); }
+.lang-sep { color: var(--border); font-size: 0.9rem; }
+
+/* Deal-sourcing result line (sits on the dark section) */
+.deal-result {
+  max-width: 760px;
+  margin: 34px auto 0;
+  text-align: center;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.82);
+  word-break: keep-all;
+}
+
+/* Founder card: constrained, readable block */
+.founder-card {
+  max-width: 720px;
+}
+.founder-card p { margin-bottom: 14px; }
+.founder-card > div p:last-child { margin-bottom: 0; }
+
+.founder-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 18px;
+}
+.founder-name-ko {
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-left: 6px;
+}
+.founder-link {
+  display: inline-block;
+  margin-top: 18px;
+  font-weight: 600;
+  color: var(--accent);
+}
+.founder-link:hover { color: var(--accent-strong); }
+
+@media (max-width: 900px) {
+  /* Keep the language toggle pinned right once the desktop nav collapses. */
+  .lang-toggle { margin-left: auto; }
 }
