@@ -1,29 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" data-lang="en">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Set language before paint to avoid a flash of the wrong language. -->
-  <script>
-    (function () {
-      try {
-        var saved = localStorage.getItem("korexis-lang");
-        var nav = (navigator.language || "").toLowerCase();
-        var lang = saved || (nav.indexOf("ko") === 0 ? "ko" : "en");
-        document.documentElement.setAttribute("data-lang", lang);
-        document.documentElement.setAttribute("lang", lang);
-      } catch (e) {
-        document.documentElement.setAttribute("data-lang", "en");
-      }
-    })();
-  </script>
-
-  <!-- SEO / social meta (canonical: English) -->
-  <title>Korexis — Korea ↔ Australia Clean Energy Bridge</title>
-  <meta name="description" content="Korexis helps Korean clean energy companies enter the Australian market, and works with Australian developers, integrators, and advisers." />
-  <meta property="og:title" content="Korexis — Korea ↔ Australia Clean Energy Bridge" />
-  <meta property="og:description" content="We help Korean clean energy companies enter the Australian market." />
+  <!-- SEO / social meta -->
+  <title>Korexis | Korean Supplier Qualification Intelligence for Australia</title>
+  <meta name="description" content="Korexis maps Korean supplier filings, awards, patents and certifications to Australian project requirements, showing what is supported, what is missing and what buyers should ask next." />
+  <meta property="og:title" content="Korexis | Korean Supplier Qualification Intelligence for Australia" />
+  <meta property="og:description" content="Requirement-level evidence for Australian teams evaluating Korean clean-energy suppliers." />
   <meta property="og:type" content="website" />
 
   <!-- Inline SVG favicon: lime "K" mark on navy -->
@@ -49,23 +34,17 @@
 
       <!-- Primary navigation -->
       <nav class="main-nav" aria-label="Primary">
-        <a href="#why-australia"><span data-lang="en">Why Australia</span><span data-lang="ko">왜 호주인가</span></a>
-        <a href="#problem"><span data-lang="en">Problem</span><span data-lang="ko">문제</span></a>
-        <a href="#deal-sourcing"><span data-lang="en">Deal sourcing</span><span data-lang="ko">딜 소싱</span></a>
-        <a href="#services"><span data-lang="en">Services</span><span data-lang="ko">서비스</span></a>
-        <a href="#founder"><span data-lang="en">Founder</span><span data-lang="ko">파운더</span></a>
-        <a href="#contact"><span data-lang="en">Contact</span><span data-lang="ko">문의</span></a>
+        <a href="#why-australia">Why now</a>
+        <a href="#problem">The qualification gap</a>
+        <a href="#deal-sourcing">How Korexis works</a>
+        <a href="#services">Sample case</a>
+        <a href="#vision">Why it compounds</a>
+        <a href="#founder">Founder</a>
+        <a href="#contact">Contact</a>
       </nav>
 
-      <!-- Language toggle (visible at all widths) -->
-      <div class="lang-toggle" role="group" aria-label="Language">
-        <button type="button" class="lang-btn" data-set-lang="en" aria-pressed="true">EN</button>
-        <span class="lang-sep" aria-hidden="true">·</span>
-        <button type="button" class="lang-btn" data-set-lang="ko" aria-pressed="false">KO</button>
-      </div>
-
-      <a href="#contact" class="btn btn-primary btn-sm header-cta">
-        <span data-lang="en">Get in touch</span><span data-lang="ko">진출 상담 요청</span>
+      <a href="#services" class="btn btn-primary btn-sm header-cta">
+        View a sample case
       </a>
 
       <!-- Mobile menu toggle -->
@@ -76,14 +55,15 @@
 
     <!-- Mobile dropdown menu -->
     <nav class="mobile-nav" aria-label="Mobile">
-      <a href="#why-australia"><span data-lang="en">Why Australia</span><span data-lang="ko">왜 호주인가</span></a>
-      <a href="#problem"><span data-lang="en">Problem</span><span data-lang="ko">문제</span></a>
-      <a href="#deal-sourcing"><span data-lang="en">Deal sourcing</span><span data-lang="ko">딜 소싱</span></a>
-      <a href="#services"><span data-lang="en">Services</span><span data-lang="ko">서비스</span></a>
-      <a href="#founder"><span data-lang="en">Founder</span><span data-lang="ko">파운더</span></a>
-      <a href="#contact"><span data-lang="en">Contact</span><span data-lang="ko">문의</span></a>
-      <a href="#contact" class="btn btn-primary btn-sm">
-        <span data-lang="en">Get in touch</span><span data-lang="ko">진출 상담 요청</span>
+      <a href="#why-australia">Why now</a>
+      <a href="#problem">The qualification gap</a>
+      <a href="#deal-sourcing">How Korexis works</a>
+      <a href="#services">Sample case</a>
+      <a href="#vision">Why it compounds</a>
+      <a href="#founder">Founder</a>
+      <a href="#contact">Contact</a>
+      <a href="#services" class="btn btn-primary btn-sm">
+        View a sample case
       </a>
     </nav>
   </header>
@@ -92,39 +72,30 @@
     <!-- ============================================================= -->
     <!-- 2. HERO                                                       -->
     <!-- ============================================================= -->
-    <section class="hero">
+    <section class="hero page-section">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <span class="eyebrow">Korea ↔ Australia Clean Energy Bridge</span>
+          <span class="eyebrow">SUPPLIER QUALIFICATION FOR AUSTRALIAN ENERGY PROJECTS</span>
 
-          <h1 class="hero-title" data-lang="en">We connect Korean clean energy companies to the Australian market.</h1>
-          <h1 class="hero-title" data-lang="ko">한국 클린에너지 기업의 호주 진출, 저희가 현지에서 돕습니다.</h1>
+          <h1 class="hero-title">Qualify Korean clean-energy suppliers before the shortlist closes.</h1>
 
-          <p class="hero-sub" data-lang="en">
-            Korexis helps Korean ESS, battery, solar, and grid companies enter Australia.
-            We also welcome conversations with Australian developers, integrators, and advisers.
-          </p>
-          <p class="hero-sub" data-lang="ko">
-            Korexis는 한국의 ESS, 배터리, 태양광, 그리드 장비 기업이 호주 시장에 진입하도록
-            진출 진단부터 첫 미팅까지 현지에서 연결합니다.
+          <p class="hero-sub">
+            Korexis maps Korean filings, public awards, patents and certification records to your
+            project requirements. You see what is supported, what is missing and what to ask next.
           </p>
 
-          <p class="hero-experiment" data-lang="en">
-            The hard part is not technology or capital. It is <strong>connection</strong>.
-          </p>
-          <p class="hero-experiment" data-lang="ko">
-            막히는 건 기술이나 자본이 아니라 <strong>연결</strong>입니다.
+          <p class="hero-experiment">
+            The output is not a longer supplier list. It is <strong>a defensible next step</strong>.
           </p>
 
-          <p class="hero-positioning" data-lang="en">Korea to Australia, connected on the ground.</p>
-          <p class="hero-positioning" data-lang="ko">한국과 호주를 현지에서 잇습니다.</p>
+          <p class="hero-positioning">Korean primary evidence. Australian buyer requirements.</p>
 
           <div class="hero-actions">
-            <a href="#contact" class="btn btn-primary">
-              <span data-lang="en">Start a conversation</span><span data-lang="ko">호주 진출 상담 요청</span>
+            <a href="#services" class="btn btn-primary">
+              View a sample qualification case
             </a>
             <a href="#contact" class="btn btn-ghost">
-              <span data-lang="en">Request the market brief</span><span data-lang="ko">마켓 브리프 요청</span>
+              Discuss a live supplier review
             </a>
           </div>
         </div>
@@ -134,38 +105,32 @@
           <div class="flow">
             <div class="flow-node">
               <span class="flow-icon">◰</span>
-              <span class="flow-label" data-lang="en">Korean Clean Energy</span>
-              <span class="flow-label" data-lang="ko">한국 클린에너지</span>
+              <span class="flow-label">Korean Supplier</span>
             </div>
             <div class="flow-arrow">→</div>
             <div class="flow-node">
               <span class="flow-icon">◎</span>
-              <span class="flow-label" data-lang="en">Diagnostics</span>
-              <span class="flow-label" data-lang="ko">진출 진단</span>
+              <span class="flow-label">Legal Entity</span>
             </div>
             <div class="flow-arrow">→</div>
             <div class="flow-node">
               <span class="flow-icon">⊞</span>
-              <span class="flow-label" data-lang="en">Policy Brief</span>
-              <span class="flow-label" data-lang="ko">정책 브리프</span>
+              <span class="flow-label">Source Evidence</span>
             </div>
             <div class="flow-arrow">→</div>
             <div class="flow-node">
               <span class="flow-icon">◇</span>
-              <span class="flow-label" data-lang="en">Partner Map</span>
-              <span class="flow-label" data-lang="ko">파트너 맵</span>
+              <span class="flow-label">Buyer Requirement</span>
             </div>
             <div class="flow-arrow">→</div>
             <div class="flow-node">
               <span class="flow-icon">✦</span>
-              <span class="flow-label" data-lang="en">First Meeting</span>
-              <span class="flow-label" data-lang="ko">첫 미팅</span>
+              <span class="flow-label">Open Questions</span>
             </div>
             <div class="flow-arrow">→</div>
             <div class="flow-node flow-node--accent">
               <span class="flow-icon">◆</span>
-              <span class="flow-label" data-lang="en">Australia Market</span>
-              <span class="flow-label" data-lang="ko">호주 시장</span>
+              <span class="flow-label">Defensible Next Step</span>
             </div>
           </div>
           <span class="orb orb-1"></span>
@@ -177,60 +142,49 @@
     <!-- ============================================================= -->
     <!-- 3. WHY AUSTRALIA                                              -->
     <!-- ============================================================= -->
-    <section class="section section-tint" id="why-australia">
+    <section class="section page-section section-tint" id="why-australia">
       <div class="container">
         <div class="section-head">
-          <span class="eyebrow">Why Australia</span>
-          <h2 data-lang="en">The Australian market is opening now.</h2>
-          <h2 data-lang="ko">지금 호주 에너지 시장이 열리고 있습니다.</h2>
-          <p class="section-lead" data-lang="en">
-            Coal is exiting. Storage is moving to the centre. The government is underwriting demand.
-            Climate disclosure rules are tightening too, so the whole entry environment is being set.
-          </p>
-          <p class="section-lead" data-lang="ko">
-            석탄 발전이 빠지고 저장장치가 중심이 됩니다. 정부가 직접 수요를 보증합니다.
-            기후공시 규제도 강화되는 흐름이라 진출 환경 전반이 정비되고 있습니다.
+          <span class="eyebrow">Why now</span>
+          <h2>Australia's supplier-qualification workload is about to compound.</h2>
+          <p class="section-lead">
+            AEMO's June 2026 Connections Scorecard reported that the NEM connections pipeline grew
+            42% over FY26 to 75.4 GW, with battery projects accounting for 52% of total capacity.
+            For Australian buyer teams, that expanding pipeline means more equipment and supplier
+            decisions must be qualified before commercial options narrow.
           </p>
         </div>
 
         <div class="card-grid cols-2">
           <article class="card">
             <div class="card-num">01</div>
-            <h3 data-lang="en">Government underwrites demand</h3>
-            <h3 data-lang="ko">정부가 수요를 보증합니다</h3>
-            <p data-lang="en">The Capacity Investment Scheme underwrites 40GW of renewable and storage capacity.</p>
-            <p data-lang="ko">Capacity Investment Scheme로 정부가 40GW 규모의 신재생·저장 용량을 언더라이팅합니다.</p>
+            <h3>A growing pipeline creates more supplier decisions</h3>
+            <p>As Australia's clean-energy pipeline expands, procurement, commercial and technical teams must qualify more equipment vendors within the same project-development window.</p>
           </article>
           <article class="card">
             <div class="card-num">02</div>
-            <h3 data-lang="en">From coal to storage</h3>
-            <h3 data-lang="ko">석탄에서 저장장치로</h3>
-            <p data-lang="en">As coal plants retire, battery storage (BESS) moves to the centre of the market.</p>
-            <p data-lang="ko">석탄 발전이 퇴출되면서 배터리 저장장치(BESS)가 시장의 중심으로 이동합니다.</p>
+            <h3>Storage expands the supplier surface area</h3>
+            <p>Battery projects require buyers to assess cells, containers, PCS, controls, transformers and lifecycle support across suppliers they may not have evaluated before.</p>
           </article>
           <article class="card">
             <div class="card-num">03</div>
-            <h3 data-lang="en">Home batteries are surging</h3>
-            <h3 data-lang="ko">가정용 배터리가 급성장합니다</h3>
-            <p data-lang="en">Home battery installs grew 260% year on year in 2025. Cumulative installs pass 450,000.</p>
-            <p data-lang="ko">2025년 가정용 배터리 설치는 전년 대비 260% 늘었습니다. 누적 설치는 45만 대를 넘었습니다.</p>
+            <h3>Longer implementation does not create more diligence capacity</h3>
+            <p>Projects may remain in development for longer, but supplier options still narrow as production slots, pricing and delivery windows become committed.</p>
           </article>
           <article class="card">
             <div class="card-num">04</div>
-            <h3 data-lang="en">WA is already awarding</h3>
-            <h3 data-lang="ko">서호주는 이미 낙찰 중입니다</h3>
-            <p data-lang="en">In WA CIS Tender 2, 2.6GWh of storage capacity was awarded.</p>
-            <p data-lang="ko">WA CIS Tender 2에서 2.6GWh 규모의 저장 용량이 낙찰됐습니다.</p>
+            <h3>Earlier qualification protects optionality</h3>
+            <p>Teams that can evaluate unfamiliar suppliers before procurement becomes urgent retain more leverage over price, production capacity and delivery timing.</p>
           </article>
         </div>
 
-        <p class="callout" data-lang="en">
-          Australia is not one market. Western Australia runs on a separate system (WEM).
-          Looking only at the east (NEM) misses real opportunity.
+        <p class="callout">
+          The scarce resource is not supplier names. It is the buyer team's capacity to turn an
+          unfamiliar supplier into a defensible next step before the project needs one.
         </p>
-        <p class="callout" data-lang="ko">
-          호주는 하나의 시장이 아닙니다. 서호주(WA)는 동부(NEM)와 분리된 별도 시장(WEM)으로 움직입니다.
-          동부만 보면 기회를 놓칩니다.
+        <p class="pricing-note">
+          Source:
+          <a href="https://www.aemo.com.au/newsroom/media-release/nem-connections-scorecard-reflects-record-result-for-fy26" target="_blank" rel="noopener noreferrer">AEMO, "NEM connections scorecard reflects record result for FY26," 20 July 2026</a>.
         </p>
       </div>
     </section>
@@ -238,43 +192,32 @@
     <!-- ============================================================= -->
     <!-- 4. PROBLEM                                                    -->
     <!-- ============================================================= -->
-    <section class="section" id="problem">
+    <section class="section page-section" id="problem">
       <div class="container">
         <div class="section-head">
-          <span class="eyebrow">The problem</span>
-          <h2 data-lang="en">The barrier is connection, not technology.</h2>
-          <h2 data-lang="ko">막히는 건 기술이 아니라 연결입니다.</h2>
-          <p class="section-lead" data-lang="en">
-            Korean companies already have the product and the capital. What stops them is
-            local partners, grid connection lead times, and local trust.
-          </p>
-          <p class="section-lead" data-lang="ko">
-            한국 기업의 제품과 자본은 이미 경쟁력이 있습니다. 실제로 막히는 지점은 현지 파트너,
-            그리드 연결 리드타임, 로컬 신뢰입니다.
+          <span class="eyebrow">The qualification gap</span>
+          <h2>English-first supplier screening creates the wrong shortlist.</h2>
+          <p class="section-lead">
+            An English-language desktop review often ranks suppliers by marketing visibility
+            rather than relevant manufacturing capability, financial standing or delivery evidence.
           </p>
         </div>
 
         <div class="card-grid cols-3">
           <article class="card">
             <div class="card-num">01</div>
-            <h3 data-lang="en">Watching only the east</h3>
-            <h3 data-lang="ko">동부만 봅니다</h3>
-            <p data-lang="en">They review the NEM and miss the WEM. The separate WA opportunity passes them by.</p>
-            <p data-lang="ko">NEM만 검토하고 WEM을 놓칩니다. 서호주의 별도 기회를 그대로 지나칩니다.</p>
+            <h3>Marketing visibility bias</h3>
+            <p>The supplier with the strongest English website appears easier to qualify, even when another manufacturer has a deeper domestic operating record.</p>
           </article>
           <article class="card">
             <div class="card-num">02</div>
-            <h3 data-lang="en">Cold outreach with a translated deck</h3>
-            <h3 data-lang="ko">번역한 소개서로 콜드 아웃리치</h3>
-            <p data-lang="en">They translate Korean materials and send them to strangers. Local context and trust are missing.</p>
-            <p data-lang="ko">한국어 자료를 번역해 낯선 상대에게 보냅니다. 현지 맥락과 신뢰가 빠져 있습니다.</p>
+            <h3>Missing English evidence is misread</h3>
+            <p>A record that exists only in Korean can look like missing capability. The information may exist in a filing, registry or award notice that the review process never searched.</p>
           </article>
           <article class="card">
             <div class="card-num">03</div>
-            <h3 data-lang="en">Korean lead-time assumptions</h3>
-            <h3 data-lang="ko">리드타임을 한국 기준으로 계산</h3>
-            <p data-lang="en">They plan grid connection and approvals on Korean timelines. Local schedules do not match.</p>
-            <p data-lang="ko">그리드 연결과 인허가를 한국 일정으로 잡습니다. 호주 현지 일정과 어긋납니다.</p>
+            <h3>The wrong entity enters the file</h3>
+            <p>The brand on a brochure, the entity signing the contract and the company operating the factory may be different organisations with different obligations.</p>
           </article>
         </div>
       </div>
@@ -283,52 +226,38 @@
     <!-- ============================================================= -->
     <!-- 5. DEAL SOURCING (differentiator)                             -->
     <!-- ============================================================= -->
-    <section class="section section-dark" id="deal-sourcing">
+    <section class="section page-section section-dark" id="deal-sourcing">
       <div class="container">
         <div class="section-head">
-          <span class="eyebrow">Deal sourcing</span>
-          <h2 data-lang="en">We find companies before the news does.</h2>
-          <h2 data-lang="ko">뉴스보다 먼저 찾아냅니다.</h2>
-          <p class="section-lead" data-lang="en">
-            Korexis runs a proprietary deal-sourcing pipeline built on Korean public filings.
-          </p>
-          <p class="section-lead" data-lang="ko">
-            Korexis는 한국 공시 데이터를 기반으로 자체 딜 소싱 파이프라인을 운영합니다.
+          <span class="eyebrow">How Korexis works</span>
+          <h2>Korean records are not the moat. Mapping them to buyer requirements is.</h2>
+          <p class="section-lead">
+            Korexis turns Korean primary records into requirement-level qualification evidence.
+            Every conclusion remains connected to its source, legal entity, scope and review date.
           </p>
         </div>
 
         <div class="card-grid cols-3 steps">
           <article class="card step-card">
             <div class="step-index">1</div>
-            <h3 data-lang="en">Scan</h3>
-            <h3 data-lang="ko">스캔</h3>
-            <p data-lang="en">Our pipeline automatically scans the public filings (DART) of listed and externally audited Korean companies.</p>
-            <p data-lang="ko">한국 상장·외감기업의 공시(DART)를 자동으로 스캔합니다.</p>
+            <h3>Identify</h3>
+            <p>Confirm the Korean legal entity behind the offer and separate it from the brand, distributor, agent and contracting entity.</p>
           </article>
           <article class="card step-card">
             <div class="step-index">2</div>
-            <h3 data-lang="en">Detect</h3>
-            <h3 data-lang="ko">탐지</h3>
-            <p data-lang="en">We build a company universe by industry, then detect Australia-entry signals inside it: local incorporation, contracts, partnerships, and market mentions.</p>
-            <p data-lang="ko">산업 분류로 기업 유니버스를 구축하고, 그 안에서 호주 진출 신호를 탐지합니다. 현지법인 설립, 계약, 파트너십, 시장 언급이 신호입니다.</p>
+            <h3>Map</h3>
+            <p>Match each source to a specific buyer requirement. A financial filing, patent, award record and certificate answer different questions.</p>
           </article>
           <article class="card step-card">
             <div class="step-index">3</div>
-            <h3 data-lang="en">Score</h3>
-            <h3 data-lang="ko">스코어링</h3>
-            <p data-lang="en">Two stages of filtering. Keyword screening first, then AI-based fit scoring.</p>
-            <p data-lang="ko">2단계로 거릅니다. 키워드 스크리닝을 먼저 하고, AI 기반 적합도 스코어링을 이어서 합니다.</p>
+            <h3>Bound</h3>
+            <p>Record what the evidence supports, where the inference stops and which supplier question should close the remaining gap.</p>
           </article>
         </div>
 
-        <p class="deal-result" data-lang="en">
-          The result: we identify Korean clean energy companies preparing or already moving into
-          Australia at the filing stage, before the news breaks. This is the foundation of our
-          deal sourcing and market intelligence.
-        </p>
-        <p class="deal-result" data-lang="ko">
-          그 결과, 호주 진출을 준비하거나 진행 중인 한국 클린에너지 기업을 공시 단계에서,
-          즉 뉴스에 나기 전에 식별합니다. 이것이 Korexis 딜 소싱과 시장 인텔리전스의 기반입니다.
+        <p class="deal-result">
+          The result is a requirement-level evidence map showing what is supported, what remains
+          unknown and what the buyer should ask next.
         </p>
       </div>
     </section>
@@ -336,72 +265,52 @@
     <!-- ============================================================= -->
     <!-- 6. SERVICES (what we do)                                      -->
     <!-- ============================================================= -->
-    <section class="section section-tint" id="services">
+    <section class="section page-section" id="services">
       <div class="container">
         <div class="section-head">
-          <span class="eyebrow">What we do</span>
-          <h2 data-lang="en">From diagnostics to the first meeting, on the ground.</h2>
-          <h2 data-lang="ko">진단부터 첫 미팅까지, 현지에서 실행합니다.</h2>
-          <p class="section-lead" data-lang="en">
-            We do not push for a deal from day one. We diagnose first, set the market context,
-            find the right counterpart, and make the first meeting happen.
-          </p>
-          <p class="section-lead" data-lang="ko">
-            처음부터 계약을 밀어붙이지 않습니다. 먼저 진단하고, 시장 맥락을 정리하고,
-            맞는 상대를 찾아 첫 자리를 만듭니다.
+          <span class="eyebrow">Sample qualification case</span>
+          <h2>Three requirements supported. One question moved to the supplier.</h2>
+          <p class="section-lead">
+            In an anonymised public-source review of a Korean clean-energy manufacturer, the
+            evidence supported three buyer requirements. Australian lifecycle support remained
+            unresolved and became a targeted RFI question rather than an assumption.
           </p>
         </div>
 
         <div class="card-grid cols-2">
           <article class="card">
             <div class="card-num">01</div>
-            <h3 data-lang="en">Market-entry diagnostics</h3>
-            <h3 data-lang="ko">진출 진단</h3>
-            <p class="service-en" data-lang="ko">Market-entry diagnostics</p>
-            <p data-lang="en">We assess whether and how your product can enter the Australian market.</p>
-            <p data-lang="ko">호주 시장에서 귀사 제품의 진입 가능성과 우선 경로를 진단합니다.</p>
+            <h3>Reporting entity and financial standing</h3>
+            <p class="service-en">SUPPORTED</p>
+            <p>Audited filings established the reporting entity, current financial statements and group structure. They did not automatically prove that the same entity would carry the project warranty.</p>
           </article>
           <article class="card">
             <div class="card-num">02</div>
-            <h3 data-lang="en">Policy &amp; market-context briefings</h3>
-            <h3 data-lang="ko">정책·시장 브리핑</h3>
-            <p class="service-en" data-lang="ko">Policy &amp; market-context briefings</p>
-            <p data-lang="en">We set out the CIS, state rules, and market structure for your situation.</p>
-            <p data-lang="ko">CIS, 주별 규제, 시장 구조를 귀사 상황에 맞춰 정리해 드립니다.</p>
+            <h3>Certification holder and scope</h3>
+            <p class="service-en">SUPPORTED</p>
+            <p>The issuing registry confirmed the certificate holder, scope and validity period. The conclusion remained limited to the configuration covered by the certificate.</p>
           </article>
           <article class="card">
             <div class="card-num">03</div>
-            <h3 data-lang="en">Partner &amp; developer mapping</h3>
-            <h3 data-lang="ko">파트너·개발사 매핑</h3>
-            <p class="service-en" data-lang="ko">Partner &amp; developer mapping</p>
-            <p data-lang="en">We map local developers and partner candidates and find the connection points.</p>
-            <p data-lang="ko">현지 개발사와 파트너 후보를 찾아 연결 지점을 만듭니다.</p>
+            <h3>Domestic public-award history</h3>
+            <p class="service-en">SUPPORTED WITH LIMITATION</p>
+            <p>The public record established that an award was made. Delivery, commissioning quality and operating performance required separate evidence.</p>
           </article>
           <article class="card">
             <div class="card-num">04</div>
-            <h3 data-lang="en">First-meeting facilitation</h3>
-            <h3 data-lang="ko">첫 미팅 셋업</h3>
-            <p class="service-en" data-lang="ko">First-meeting facilitation</p>
-            <p data-lang="en">We set up the first meeting with the right counterpart, on the ground.</p>
-            <p data-lang="ko">적합한 상대와의 첫 미팅을 현지에서 셋업합니다.</p>
+            <h3>Australian lifecycle support</h3>
+            <p class="service-en">UNRESOLVED</p>
+            <p>Public sources did not establish the local response entity, critical-spares location or restoration commitment. These questions moved to the RFI, reference call and contract review.</p>
           </article>
         </div>
 
-        <p class="callout" data-lang="en">
-          Korexis supports Korean clean energy companies entering Australia through market-entry
-          diagnostics, policy and market-context briefings, partner and developer mapping,
-          and first-meeting facilitation.
+        <p class="callout">
+          The output is not an automatic score. It is a defensible next step with a visible
+          evidence trail.
         </p>
-        <p class="callout" data-lang="ko">
-          Korexis는 진출 진단, 정책·시장 브리핑, 파트너·개발사 매핑, 첫 미팅 셋업으로
-          한국 클린에너지 기업의 호주 진출을 지원합니다.
-        </p>
-        <p class="pricing-note" data-lang="en">
-          Where projects require legal, contractual, or formal regulatory advice, we connect
-          clients with appropriately qualified Australian counsel.
-        </p>
-        <p class="pricing-note" data-lang="ko">
-          법률, 계약, 공식 규제 자문이 필요한 경우 자격을 갖춘 호주 현지 전문가와 연결합니다.
+        <p class="pricing-note">
+          Korexis does not provide legal advice. Legal, contractual and regulatory matters should
+          be reviewed by appropriately qualified Australian counsel.
         </p>
       </div>
     </section>
@@ -409,89 +318,69 @@
     <!-- ============================================================= -->
     <!-- 7. SERVICE → DATA → PLATFORM VISION                           -->
     <!-- ============================================================= -->
-    <section class="section" id="vision">
+    <section class="section page-section section-tint" id="vision">
       <div class="container">
         <div class="section-head">
-          <span class="eyebrow">Service · Data · Platform</span>
-          <h2 data-lang="en">Fieldwork becomes data. Data becomes a platform.</h2>
-          <h2 data-lang="ko">발로 뛴 실행을 데이터로, 데이터를 플랫폼으로.</h2>
-          <p class="section-lead" data-lang="en">
-            At first, people do the matching by hand. As matches accumulate, they become data.
-            That data becomes a platform.
-          </p>
-          <p class="section-lead" data-lang="ko">
-            처음에는 사람이 직접 매칭합니다. 매칭이 쌓이면 데이터가 되고, 그 데이터가 플랫폼이 됩니다.
+          <span class="eyebrow">Why it compounds</span>
+          <h2>Each supplier review makes the next one faster.</h2>
+          <p class="section-lead">
+            Supplier evidence can be refreshed and reused across projects. Buyer requirements and
+            decisions remain project-specific. Korexis separates the reusable evidence layer from
+            the buyer-controlled decision layer.
           </p>
         </div>
 
-        <ol class="evolution" aria-label="Service to platform evolution">
+        <ol class="evolution" aria-label="Evidence to decision flow">
           <li class="evo-stage evo-stage--now">
             <span class="evo-index">01</span>
-            <span class="evo-name">Service</span>
-            <span class="evo-note" data-lang="en">People match by hand</span>
-            <span class="evo-note" data-lang="ko">사람이 직접 매칭</span>
+            <span class="evo-name">Source</span>
+            <span class="evo-note">Korean primary records</span>
           </li>
           <li class="evo-arrow" aria-hidden="true">→</li>
           <li class="evo-stage">
             <span class="evo-index">02</span>
-            <span class="evo-name">Data</span>
-            <span class="evo-note" data-lang="en">Stored on one schema</span>
-            <span class="evo-note" data-lang="ko">같은 스키마로 축적</span>
+            <span class="evo-name">Evidence</span>
+            <span class="evo-note">Entity, scope, period and provenance checked</span>
           </li>
           <li class="evo-arrow" aria-hidden="true">→</li>
           <li class="evo-stage">
             <span class="evo-index">03</span>
-            <span class="evo-name">Internal Tools</span>
-            <span class="evo-note" data-lang="en">Repetitive work automated</span>
-            <span class="evo-note" data-lang="ko">반복 작업 자동화</span>
+            <span class="evo-name">Requirement</span>
+            <span class="evo-note">Evidence mapped to project criteria</span>
           </li>
           <li class="evo-arrow" aria-hidden="true">→</li>
           <li class="evo-stage evo-stage--future">
             <span class="evo-index">04</span>
-            <span class="evo-name">Platform</span>
-            <span class="evo-note" data-lang="en">Market-entry matching platform</span>
-            <span class="evo-note" data-lang="ko">진출 매칭 플랫폼</span>
+            <span class="evo-name">Next Step</span>
+            <span class="evo-note">Supported facts and open questions recorded</span>
           </li>
         </ol>
 
         <div class="datalayer-grid">
           <div class="datalayer-col">
-            <h3 class="datalayer-title" data-lang="en">What accumulates as data</h3>
-            <h3 class="datalayer-title" data-lang="ko">데이터로 쌓이는 것</h3>
-            <ul class="dl-list" data-lang="en">
-              <li>Which Korean companies are preparing to enter</li>
-              <li>Which Australian partners are open</li>
-              <li>Which technologies fit the market</li>
-              <li>How grid connection lead times move</li>
-              <li>Which policies open which opportunities</li>
-            </ul>
-            <ul class="dl-list" data-lang="ko">
-              <li>어떤 한국 기업이 진출을 준비하는가</li>
-              <li>어떤 호주 파트너가 열려 있는가</li>
-              <li>어떤 기술군이 시장에 맞는가</li>
-              <li>그리드 연결 리드타임은 어떻게 움직이는가</li>
-              <li>어떤 정책이 어떤 기회를 여는가</li>
+            <h3 class="datalayer-title">What compounds as reusable evidence</h3>
+            <ul class="dl-list">
+              <li>Legal entity and ownership structure</li>
+              <li>Financial and operating record</li>
+              <li>Technology and patent history</li>
+              <li>Public awards and delivery evidence</li>
+              <li>Certification scope, validity and freshness</li>
             </ul>
           </div>
           <div class="datalayer-col">
-            <h3 class="datalayer-title" data-lang="en">Modules on the roadmap</h3>
-            <h3 class="datalayer-title" data-lang="ko">제품화 예정 모듈</h3>
+            <h3 class="datalayer-title">Buyer-ready outputs</h3>
             <div class="module-grid">
-              <span class="module-chip">Market Signal Scanner</span>
-              <span class="module-chip">Partner Map Builder</span>
-              <span class="module-chip">Policy Brief Generator</span>
-              <span class="module-chip">Match Dashboard</span>
+              <span class="module-chip">Supplier Evidence Map</span>
+              <span class="module-chip">Qualification Brief</span>
+              <span class="module-chip">Coverage Gap Review</span>
+              <span class="module-chip">RFI Question Set</span>
             </div>
           </div>
         </div>
 
-        <p class="datalayer-key" data-lang="en">
-          People run it at first. But we run the same structure every time and store on the same
-          schema, so we productise the repeatable parts.
-        </p>
-        <p class="datalayer-key" data-lang="ko">
-          초기에는 사람이 운영합니다. 하지만 매번 같은 구조로 실행하고 같은 스키마로 데이터를 쌓아,
-          반복되는 부분부터 제품화합니다.
+        <p class="datalayer-key">
+          The data asset is not a list of supplier names. It is a reusable, source-linked record
+          of what each supplier claim can and cannot support.
         </p>
       </div>
     </section>
@@ -499,25 +388,19 @@
     <!-- ============================================================= -->
     <!-- 8. FOUNDER                                                    -->
     <!-- ============================================================= -->
-    <section class="section section-tint" id="founder">
+    <section class="section page-section" id="founder">
       <div class="container">
         <div class="section-head">
           <span class="eyebrow">Founder</span>
-          <h2 data-lang="en">Run by someone who bridges both countries.</h2>
-          <h2 data-lang="ko">양국을 직접 잇는 사람이 운영합니다.</h2>
+          <h2>Korean primary evidence, interpreted for Australian buyer requirements.</h2>
         </div>
 
         <div class="card founder-card">
-          <p class="founder-name">Emily Jo <span class="founder-name-ko">조명지</span></p>
-          <div data-lang="en">
-            <p>Korean, based in Australia. Based in Perth.</p>
-            <p>I work across both languages and both business cultures. I read the Korean context and the Australian expectation at the same time.</p>
-            <p>I studied cybersecurity, and I built the deal-sourcing pipeline myself.</p>
-          </div>
-          <div data-lang="ko">
-            <p>한국인이며 호주에 거주합니다. Perth를 기반으로 활동합니다.</p>
-            <p>양국의 언어와 비즈니스 문화를 함께 씁니다. 한국 기업의 맥락과 호주 현지의 기대치를 동시에 읽습니다.</p>
-            <p>사이버보안을 전공했고, 딜 소싱 파이프라인을 직접 구축했습니다.</p>
+          <p class="founder-name">Emily Jo</p>
+          <div>
+            <p>Emily Jo is Korean and based in Perth. She works between Korean-language supplier evidence and Australian procurement, commercial and technical requirements.</p>
+            <p>Her background in IT and security shapes how Korexis handles source traceability, structured evidence, data discipline and the separation of verified facts from unresolved claims.</p>
+            <p>Korexis is a repeatable supplier-qualification workflow built around source traceability, explicit evidence limits and buyer-controlled decisions.</p>
           </div>
           <a class="founder-link" href="https://www.linkedin.com/in/emily-jo-7a94953ab" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
@@ -525,60 +408,51 @@
     </section>
 
     <!-- ============================================================= -->
-    <!-- 9. CTA / CONTACT                                              -->
+    <!-- 9. CTA / CONTACT + FOOTER — one combined final canvas         -->
     <!-- ============================================================= -->
-    <section class="section cta-section" id="contact">
-      <div class="container cta-inner">
-        <h2 data-lang="en">Start a conversation.</h2>
-        <h2 data-lang="ko">호주 진출, 대화부터 시작하시죠.</h2>
+    <div class="page-section contact-page" id="contact">
+      <div class="cta-section">
+        <div class="container cta-inner">
+          <h2>See how a Korean supplier looks against your requirements.</h2>
 
-        <p class="cta-body" data-lang="en">
-          We help Korean clean energy companies enter Australia. We also welcome conversations
-          with Australian developers, integrators, and advisers. You can also request the market brief.
-        </p>
-        <p class="cta-body" data-lang="ko">
-          귀사 상황을 기준으로 호주 시장의 기회와 진입 경로를 짚어드립니다.
-          마켓 브리프도 요청하실 수 있습니다.
-        </p>
+          <p class="cta-body">
+            If your team is evaluating a Korean clean-energy supplier, bring one live requirement or
+            unresolved claim. Korexis structures the available Korean primary evidence against that
+            requirement, shows what is supported and turns the remaining gap into the next supplier
+            question.
+          </p>
 
-        <div class="cta-actions">
-          <!-- English audience -->
-          <a href="mailto:contact@korexis.co?subject=Market%20Entry%20Consultation" class="btn btn-primary btn-lg" data-lang="en">
-            Start a conversation
-          </a>
-          <a href="mailto:contact@korexis.co?subject=Market%20Brief%20Request" class="btn btn-ghost btn-lg" data-lang="en">
-            Request the market brief
-          </a>
-          <!-- Korean audience -->
-          <a href="mailto:contact@korexis.co?subject=%ED%98%B8%EC%A3%BC%20%EC%A7%84%EC%B6%9C%20%EC%83%81%EB%8B%B4%20%EC%9A%94%EC%B2%AD" class="btn btn-primary btn-lg" data-lang="ko">
-            호주 진출 상담 요청
-          </a>
-          <a href="mailto:contact@korexis.co?subject=%EB%A7%88%EC%BC%93%20%EB%B8%8C%EB%A6%AC%ED%94%84%20%EC%9A%94%EC%B2%AD" class="btn btn-ghost btn-lg" data-lang="ko">
-            마켓 브리프 요청
-          </a>
+          <div class="cta-actions">
+            <a href="#services" class="btn btn-primary btn-lg">
+              View the sample qualification case
+            </a>
+            <a href="mailto:contact@korexis.co?subject=Australian%20Supplier%20Qualification%20Review" class="btn btn-ghost btn-lg">
+              Discuss a live supplier review
+            </a>
+          </div>
+
+          <p class="cta-email">
+            Email: <a href="mailto:contact@korexis.co">contact@korexis.co</a>
+            ·
+            <a href="https://www.linkedin.com/in/emily-jo-7a94953ab" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </p>
         </div>
-
-        <p class="cta-email">
-          Email: <a href="mailto:contact@korexis.co">contact@korexis.co</a>
-          ·
-          <a href="https://www.linkedin.com/in/emily-jo-7a94953ab" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        </p>
       </div>
-    </section>
-  </main>
 
-  <!-- ============================================================= -->
-  <!-- FOOTER                                                        -->
-  <!-- ============================================================= -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <span class="logo-text">Korexis</span>
-        <p>Korea ↔ Australia Clean Energy Bridge.</p>
-      </div>
-      <p class="footer-copy">© 2026 Korexis. All rights reserved.</p>
+      <!-- ============================================================= -->
+      <!-- FOOTER                                                        -->
+      <!-- ============================================================= -->
+      <footer class="site-footer">
+        <div class="container footer-inner">
+          <div class="footer-brand">
+            <span class="logo-text">Korexis</span>
+            <p>Korean clean-energy supplier qualification intelligence for Australian projects.</p>
+          </div>
+          <p class="footer-copy">© 2026 Korexis. All rights reserved.</p>
+        </div>
+      </footer>
     </div>
-  </footer>
+  </main>
 
   <script src="script.js"></script>
 </body>

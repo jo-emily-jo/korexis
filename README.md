@@ -1,29 +1,27 @@
 # Korexis — Landing Page
 
-A clean, premium one-page landing site for **Korexis** — *the GTM layer for Korean SaaS entering global markets*. Built as a static site for early customer meetings, design partners, advisors, and investors.
+An English-only static landing page for **Korexis**. The primary customer is the Australian procurement, commercial, engineering or supplier-quality team evaluating Korean clean-energy suppliers. Korexis maps Korean filings, patent records, public awards and certification records to a buyer's project requirements, showing what is supported, what is missing and what to ask next.
 
 ## File structure
 
 ```
 Korexis/
-├── index.html    # Full page markup (semantic HTML, all 10 sections + header/footer)
+├── index.html    # Full page markup (semantic HTML, all sections + header/footer)
 ├── styles.css    # All styling — design tokens, layout, components, responsive rules
 ├── script.js     # Vanilla JS — mobile menu toggle only (smooth scroll is native CSS)
 └── README.md     # This file
 ```
 
-No build step, no dependencies, no external assets. Fonts are system/web-safe (Inter → Pretendard → system fallbacks) so Korean text renders naturally.
+No build step, no dependencies, no external assets. Fonts are system/web-safe (Inter → Pretendard → system fallbacks).
 
 ### Sections (in order)
-Header · Hero · Problem · Why Australia · Market Entry Diagnostic (pricing) · Pilot workflow · Deliverables · Data Layer / SaaS vision · Scope · CTA / Contact · Footer
+Header · Hero · Why now · The qualification gap · How Korexis works · Sample qualification case · Why it compounds · Founder · CTA / Contact · Footer
 
-Core positioning: *Korexis turns overseas market entry from guesswork into a repeatable experiment* — not a contact-list / cheap-research service, and no guarantee of meetings or revenue.
+Core positioning: Korexis is supplier qualification intelligence, not a GTM agency, deal-sourcing service, partner-matching service or supplier marketplace. Korexis does not automatically pass or fail a supplier. It identifies what is independently supported, where the evidence stops and what the buyer should ask next.
 
-The **Market Entry Diagnostic** section (`#pricing`) is a staged validation flow, not standalone packages: **Step 01 — 시장 진입 진단 ($1,500, one-time)** → **Step 02 — GTM 실행 파일럿 ($2,000, one-time, after diagnostic)** → **Step 03 — 월간 GTM 운영 (from $1,200/mo, recurring)**. Each step is gated on signal from the previous one.
+The sample-case section walks through an anonymised public-source qualification review of a Korean clean-energy manufacturer. No real supplier, buyer, project or interview participant is named. The methodology section (`#deal-sourcing`) describes the source-to-requirement mapping discipline: identify the legal entity, map each source to a buyer requirement, and bound what the evidence supports versus where inference stops. The compounding-value section (`#vision`) separates the reusable supplier-evidence layer, which can be refreshed and reused across projects, from the buyer-controlled requirement and decision layer, which stays project-specific.
 
-The **Data Layer** section (`#data-layer`) frames the long-term vision: the manual service evolves Service → Data → Internal Tools → SaaS Platform, with future product modules (Buyer Map Builder, Reply Classifier, GTM Report Generator, etc.).
-
-All call-to-action buttons point to `#contact`; the primary CTA opens an email to `korexis.co@gmail.com`. The LinkedIn button links to the founder's profile and opens in a new tab.
+All call-to-action buttons point to `#services` (the sample case) or `#contact`. The contact CTA opens an email to `contact@korexis.co`. The LinkedIn button links to the founder's profile and opens in a new tab.
 
 ## Local preview
 
@@ -67,7 +65,7 @@ No environment variables or build configuration are required for any host.
 
 - **Colors / radius / fonts:** edit the `:root` design tokens at the top of `styles.css`.
 - **Copy:** all text lives in `index.html`.
-- **Contact email:** search `korexis.co@gmail.com` in `index.html`.
-- **LinkedIn:** the button links to the founder's profile (`/in/명지-조-a446b4414`, percent-encoded in the `href`).
+- **Contact email:** search `contact@korexis.co` in `index.html`.
+- **LinkedIn:** the button links to the founder's profile (`/in/emily-jo-7a94953ab`).
 
 © 2026 Korexis. All rights reserved.
